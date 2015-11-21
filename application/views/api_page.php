@@ -12,19 +12,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link href="<?=base_url()?>assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700" rel="stylesheet">
     <link href="<?=base_url()?>assets/css/main.css" rel="stylesheet">
+
+    <!-- LOAD ALL JS -->
+    <script src="<?=base_url()?>assets/bootstrap/js/bootstrap.min.js" text="text/javascript" ></script>
+    <script src="<?=base_url()?>assets/js/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
 
-<div class="container-fluid body">
-    <?$this->load->view('common/api_header.php')?>
-    <div class="row-fluid content">
-        <?$this->load->view($subview)?>
-    </div>
-    <?$this->load->view('common/api_footer.php')?>
-</div>
-
-<!-- LOAD ALL JS AT THE END -->
-<script src="<?=base_url()?>assets/bootstrap/js/bootstrap.min.js" text="text/javascript" ></script>
+<?$this->load->view($subview)?>
+<?$this->load->view('common/api_footer.php')?>
 
 </body>
 </html>

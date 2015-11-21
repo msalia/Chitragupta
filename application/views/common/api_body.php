@@ -9,6 +9,6 @@
         </a>
     </div>
     <div class="main-content">
-        <?$this->load->view($subview);?>
+        <?$this->load->view($subview, $viewData);?>
     </div>
 </div>

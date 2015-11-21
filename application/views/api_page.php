@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
 
-<?$this->load->view('common/api_body.php', array('subview' => $subview))?>
+<?$this->load->view('common/api_body.php', array('subview' => $subview, 'viewData' => $viewData))?>
 <?$this->load->view('common/api_footer.php')?>
 
 </body>

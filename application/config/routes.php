@@ -54,3 +54,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['uploadScoreboard'] = 'API/uploadScoreboard';
+$route['uploadScoreboard/do_upload'] = 'API/doUpload';

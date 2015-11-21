@@ -91,6 +91,7 @@ body {
     margin-bottom: 15px;
     padding: 15px 20px;
     text-align: center;
+    text-decoration: none;
     transition: all .4s ease;
     width: 100%;
 }
@@ -102,6 +103,7 @@ body {
 .upload-button:hover,
 .navbar li:hover {
     background-color: #4483AA;
+    color: #FFFFFF;
 }
 
 .upload-button.selected,
@@ -117,6 +119,7 @@ body {
 #selected-file {
     border: 5px solid #E8EAED;
     box-sizing: border-box;
+    cursor: pointer;
     display: block;
     font-size: 20px;
     margin-bottom: 15px;

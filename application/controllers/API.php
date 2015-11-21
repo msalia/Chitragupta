@@ -10,6 +10,11 @@ class API extends CI_Controller {
         $this->loadView();
     }
 
+    public function uploadScoreboard() {
+        $this->setUploadSubview();
+        $this->loadView();
+    }
+
     private function getData() {
         $data = array();
 
@@ -26,6 +31,10 @@ class API extends CI_Controller {
 
     private function setIndexSubview() {
         $this->subview = "index/landing.php";
+    }
+
+    private function setUploadSubview() {
+        $this->subview = "upload/landing.php";
     }
 
 }

@@ -55,3 +55,5 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['uploadScoreboard'] = 'API/uploadScoreboard';
 $route['uploadScoreboard/do_upload'] = 'API/doUpload';
+$route['getTeams'] = 'API/getTeams';
+$route['getTeam'] = 'API/getTeam';

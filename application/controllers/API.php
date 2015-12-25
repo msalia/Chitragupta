@@ -28,6 +28,33 @@ class API extends CI_Controller {
         $this->loadView();
     }
 
+    public function getTeams() {
+            $callback = $_GET['callback'];
+        $teams = $this->db->query(
+            'SELECT t.team_id as id, t.team_name as label FROM Team t WHERE t.year = '.date('Y')
+        );
+        $data = json_encode($teams->result());
+            echo $callback.'('.$data.');';
+    }
+
+    public function getTeam() {
+            $callback = $_GET['callback'];
+        $id = $_GET['id'];
+        $team = $this->db->query(
+            'SELECT t.team_id as id, t.team_name as teamName FROM Team t WHERE t.team_id = '.$id
+        );
+        $teamData = $team->result();
+        $players = $this->db->query(
+            'SELECT p.profile_id as id, p.first_name as first, p.last_name as last FROM Profile p WHERE p.team_id = '.$id
+        );
+        $data = array(
+            'total' => count($players->result()),
+            'teamName' => $teamData[0]->teamName,
+            'players' => $players->result(),
+        );
+            echo $callback.'('.json_encode($data).');';
+    }
+
     function doUpload() {
         $config['upload_path'] = './uploads/';
         $config['allowed_types'] = 'csv|png';
